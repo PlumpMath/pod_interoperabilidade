@@ -5,7 +5,7 @@ package threads;
  */
 public class Somador {
 
-    private boolean disponivel;
+    private volatile boolean disponivel;
     private int x;
     private int y;
 
@@ -25,7 +25,7 @@ public class Somador {
     }
 
     public synchronized int getX() {
-        while (disponivel == false) {
+        while (disponivel == false) {//
             try {
                 //wait for set X value
                 wait();
@@ -37,7 +37,7 @@ public class Somador {
     }
 
     public synchronized void setX(int x) {
-        while (disponivel == true) {
+        while (disponivel == true) {//alguem muda para falso
             try {
                 wait();
             } catch (InterruptedException e) { }
@@ -60,12 +60,12 @@ public class Somador {
 
     public synchronized void sum() {
 
-        while (this.disponivel == true) {
+        while (this.disponivel == true) {//
             try {
                 wait();
             } catch (InterruptedException e) { }
         }
-        this.disponivel = false;
+        this.disponivel = false;//falso
 
         setX(getY() + 1);
         setY(getX() + 1);

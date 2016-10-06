@@ -44,14 +44,6 @@ public class Main {
         } while (c != 0);
 
 
-
-
-
-
-
-
-
-
     }
 
 }
