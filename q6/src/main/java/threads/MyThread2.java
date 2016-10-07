@@ -6,6 +6,7 @@ package threads;
 public class MyThread2 extends Thread {
 
     private Somador somador;
+    private static int i = 0;
 
     public MyThread2(Somador somador) {
 
@@ -19,6 +20,7 @@ public class MyThread2 extends Thread {
     public void run() {
 
         synchronized (somador) {
+            System.out.println("somou: " + i++);
             somador.sum();
         }
 

@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -Djava.rmi.server.hostname=q15accounta.herokuapp.com -cp target/classes:target/dependency/* q15accounta.Main

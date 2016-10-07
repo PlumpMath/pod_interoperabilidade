@@ -3,13 +3,11 @@ package threads;
 /**
  * Created by Natarajan on 17/09/16.
  *
- *
- * Resposta à questão:
- *
- * Também devido à concorrência resultante da execução paralela das Threads A e B, o valor de x ao final de uma execução
- * da codificação proposta pode variar.
- *
- * Os resultados que obtivemos foram: 35, 37 ou 39.
+ * Professor, esta aqui não é a resposta. Deixei o código aqui para vislumbre posterior, para estudo e aprimoramento
+ * sobre o assunto, visto que quebrei muita cabeça tentando resolver desta forma e o assunto é interessante.
+ * Favor observar os outros Main's.
+ * Atenciosamente,
+ * Natarajan
  *
  */
 public class Main {
@@ -21,7 +19,7 @@ public class Main {
 
         Somador somador = new Somador();
 
-        for (int i = 0; i <= 10; i++ ) {
+        for (int i = 0; i < 10; i++ ) {
 
 
             Thread a = new MyThread2(somador);

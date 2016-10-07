@@ -1,0 +1,1 @@
+web: java $JAVA_OPTS -Djava.rmi.server.hostname=q15accountmanager.herokuapp.com -cp target/classes:target/dependency/* ifpb.pod.Main
